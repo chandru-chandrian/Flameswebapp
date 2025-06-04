@@ -25,7 +25,16 @@ SECRET_KEY = 'django-insecure-)s-^ol^qb=d8ke0acuenk*_=vsgdmlv8#5)am8sn6e_7j6mj_o
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+import os
+
+RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
+
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'flameszone.onrender.com']
+
+if RENDER_EXTERNAL_HOSTNAME:
+    ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
+
+
 
 
 # Application definition
