@@ -29,11 +29,7 @@ DEBUG = True
 
 # RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
 
-ALLOWED_HOSTS = [
-    'localhost',
-    'http://127.0.0.1:8000/',
-    'flameszone.onrender.com'
-]
+ALLOWED_HOSTS = ['*']
 
 print("ALLOWED_HOSTS =", ALLOWED_HOSTS) 
 
